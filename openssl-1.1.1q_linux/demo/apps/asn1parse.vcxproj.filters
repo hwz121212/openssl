@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="apps">
+      <UniqueIdentifier>{24c5293a-4e7a-4bb2-964d-514d05cb0dce}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="apps.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+    <ClCompile Include="asn1pars.c">
+      <Filter>apps</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="apps.h">
+      <Filter>apps</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

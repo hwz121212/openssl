@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="apps.c" />
+    <ClCompile Include="asn1pars.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="apps.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5EA5B008-DC5F-4168-9441-4DC0B9B1EC82}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>linux_test</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+    <ProjectName>asn1parse</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+    <TargetName>$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile />
+    <ClCompile />
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;include;apps;crypto;crypto\asn1;crypto\des;crypto\evp;crypto\modes;crypto\ec\curve448;crypto\ec\curve448\arch_32;/root/projects;/root/projects/asn1parse;/root/projects/openssl;/root/projects/openssl/include;/root/projects/openssl/apps;/root/projects/openssl/crypto;/root/projects/openssl/crypto/asn1;/root/projects/openssl/crypto/des;/root/projects/openssl/crypto/evp;/root/projects/openssl/crypto/modes;/root/projects/openssl/crypto/curve448;/root/projects/openssl/crypto/curve448/arch_32;$(SolutionDir)thirdparty\openssl-1.1.1q_linux;$(SolutionDir)thirdparty\openssl-1.1.1q_linux\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__x86_64__;__BORLANDC__;L_ENDIAN;OPENSSL_NO_ASM;OPENSSL_NO_STATIC_ENGINE;__STDC_NO_ATOMICS__</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>-ldl %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>/root/bin/$(Configuration)/openssl.so</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile />
+    <ClCompile />
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;include;apps;crypto;crypto\asn1;crypto\des;crypto\evp;crypto\modes;crypto\ec\curve448;crypto\ec\curve448\arch_32;/root/projects;/root/projects/asn1parse;/root/projects/openssl;/root/projects/openssl/include;/root/projects/openssl/apps;/root/projects/openssl/crypto;/root/projects/openssl/crypto/asn1;/root/projects/openssl/crypto/des;/root/projects/openssl/crypto/evp;/root/projects/openssl/crypto/modes;/root/projects/openssl/crypto/curve448;/root/projects/openssl/crypto/curve448/arch_32;$(SolutionDir)thirdparty\openssl-1.1.1q_linux;$(SolutionDir)thirdparty\openssl-1.1.1q_linux\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__x86_64__;__BORLANDC__;L_ENDIAN;OPENSSL_NO_ASM;OPENSSL_NO_STATIC_ENGINE;__STDC_NO_ATOMICS__</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>-ldl %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>/root/bin/$(Configuration)/openssl.so</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
