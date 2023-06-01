@@ -2304,6 +2304,9 @@
     <ClCompile Include="crypto\sm3\sm3.c">
       <Filter>crypto\sm3</Filter>
     </ClCompile>
+    <ClCompile Include="crypto\des\ncbc_enc.c">
+      <Filter>crypto\des</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="crypto\md4\md4_local.h">
