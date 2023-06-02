@@ -10,6 +10,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2_exe", "2_exe", "{B81BD00F-088A-4429-95C7-1CF105B70FD0}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "openssl_exe", "thirdparty\openssl-1.1.1q\apps\openssl_exe.vcxproj", "{D28C0ECF-2CAC-477B-A9A2-5618024BD8B4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{70ABE75C-FBC2-4C82-9103-B952FA5CD168} = {70ABE75C-FBC2-4C82-9103-B952FA5CD168}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libopenssl", "thirdparty\openssl-1.1.1q\libopenssl.vcxproj", "{70ABE75C-FBC2-4C82-9103-B952FA5CD168}"
 EndProject
